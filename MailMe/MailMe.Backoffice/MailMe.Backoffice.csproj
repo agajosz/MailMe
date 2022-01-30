@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+        <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+        <RootNamespace>MailMe.Backend</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="AutoMapper" Version="10.1.1" />
+        <PackageReference Include="AutoMapper.Collection.EntityFrameworkCore" Version="7.0.1" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+          <PrivateAssets>all</PrivateAssets>
+          <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.6.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Helpers\" />
+      <Folder Include="Carriers\Requests\Users\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MailMe.Application\MailMe.Application.csproj" />
+      <ProjectReference Include="..\MailMe.Data\MailMe.Data.csproj">
+        <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+      </ProjectReference>
+      <ProjectReference Include="..\MailMe.Jobs\MailMe.Jobs.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Helpers\" />
+      <None Remove="Carriers\Requests\Users\" />
+    </ItemGroup>
+</Project>

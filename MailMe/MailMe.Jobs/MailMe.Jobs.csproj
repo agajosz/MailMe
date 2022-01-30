@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\MailMe.Data\MailMe.Data.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Hangfire.AspNetCore" Version="1.7.25" />
+      <PackageReference Include="Hangfire.Console" Version="1.4.2" />
+      <PackageReference Include="Hangfire.Core" Version="1.7.25" />
+      <PackageReference Include="Hangfire.Dashboard.Basic.Authentication" Version="5.0.0" />
+      <PackageReference Include="Hangfire.MemoryStorage" Version="1.7.0" />
+      <PackageReference Include="Hangfire.SqlServer" Version="1.7.25" />
+      <PackageReference Include="SendGrid" Version="9.24.2" />
+      <PackageReference Include="SendGrid.Extensions.DependencyInjection" Version="1.0.0" />
+    </ItemGroup>
+
+</Project>

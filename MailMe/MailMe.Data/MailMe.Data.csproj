@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net5.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="AutoMapper" Version="10.1.1" />
+      <PackageReference Include="AutoMapper.Collection.EntityFrameworkCore" Version="7.0.1" />
+      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="8.1.1" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.10">
+        <PrivateAssets>all</PrivateAssets>
+        <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      </PackageReference>
+      <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.10" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.10" />
+      <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="5.0.2" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.10" />
+      <PackageReference Include="Microsoft.Extensions.Options" Version="5.0.0" />
+      <PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="5.0.10" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Extensions\" />
+      <None Remove="Microsoft.Extensions.DependencyInjection" />
+      <None Remove="Microsoft.EntityFrameworkCore" />
+      <None Remove="Microsoft.Extensions.Options" />
+      <None Remove="Microsoft.EntityFrameworkCore.InMemory" />
+      <None Remove="Datastructure\" />
+      <None Remove="Datastructure\Users\" />
+      <None Remove="Datastructure\Users\Mappings\" />
+      <None Remove="Helpers\" />
+      <None Remove="Repositories\" />
+      <None Remove="Repositories\Users\" />
+    </ItemGroup>
+    <ItemGroup>
+      <Folder Include="Extensions\" />
+      <Folder Include="Datastructure\" />
+      <Folder Include="Datastructure\Users\" />
+      <Folder Include="Datastructure\Users\Mappings\" />
+      <Folder Include="Helpers\" />
+      <Folder Include="Migrations" />
+      <Folder Include="Repositories\" />
+      <Folder Include="Repositories\Users\" />
+    </ItemGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\MailMe.Application\MailMe.Application.csproj" />
+    </ItemGroup>
+</Project>
